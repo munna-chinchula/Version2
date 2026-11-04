@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fffdfa" />
+    <title>ManzilChaser — Where Learning Leads To Brighter Futures</title>
+    <link rel="stylesheet" href="./dashboard/styles/tokens.css" />
+    <link rel="stylesheet" href="./dashboard/hero/hero.css" />
+    <script defer src="./dashboard/hero/hero.js"></script>
+  </head>
+  <body>
+    <main id="dashboard">
+      <!-- Add future sections here as siblings of the hero. -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <img class="hero__blue-shape" src="./dashboard/hero/assets/blue-shape.svg" alt="" />
+        <img class="hero__yellow-shape" src="./dashboard/hero/assets/yellow-shape.svg" alt="" />
+
+        <header class="site-header" id="site-header">
+          <a class="brand" href="#hero" aria-label="ManzilChaser home">
+            <img src="./dashboard/hero/assets/brand-logo.svg" alt="" />
+          </a>
+          <button class="site-header__mobile-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+            <button class="site-nav__item" type="button" data-menu="Explore" aria-controls="mega-menu" aria-expanded="false">Explore <img src="./dashboard/hero/assets/chevron.svg" alt="" /></button>
+            <button class="site-nav__item" type="button" data-route="kids-learning">Kids Learning</button>
+            <button class="site-nav__item" type="button" data-menu="Exams" aria-controls="mega-menu" aria-expanded="false">Exams <img src="./dashboard/hero/assets/chevron.svg" alt="" /></button>
+            <button class="site-nav__item" type="button" data-menu="Degrees & Colleges" aria-controls="mega-menu" aria-expanded="false">Degrees &amp; Colleges <img src="./dashboard/hero/assets/chevron.svg" alt="" /></button>
+            <button class="site-nav__item" type="button" data-menu="Skills & Learning" aria-controls="mega-menu" aria-expanded="false">Skills &amp; Learning <img src="./dashboard/hero/assets/chevron.svg" alt="" /></button>
+            <button class="site-nav__item" type="button" data-menu="Tools" aria-controls="mega-menu" aria-expanded="false">Tools <img src="./dashboard/hero/assets/chevron.svg" alt="" /></button>
+          </nav>
+          <div class="site-header__actions">
+            <button type="button" class="site-header__login" data-action="login">Login</button>
+            <button type="button" class="site-header__start" data-action="start">Get Started <span><img src="./dashboard/hero/assets/nav-arrow.svg" alt="" /></span></button>
+          </div>
+          <div class="mega-menu" id="mega-menu" data-variant="explore" hidden aria-label="Explore ManzilChaser">
+            <div class="mega-menu__column" data-column="Learning">
+              <h2>Learning</h2>
+              <button type="button" data-path="kids-learning"><img src="./dashboard/hero/assets/menu-kids.svg" alt="" />Kids Learning</button>
+              <button type="button" data-path="tuitions"><img src="./dashboard/hero/assets/menu-tuitions.svg" alt="" />Tuitions</button>
+              <button type="button" data-path="coding-it"><img src="./dashboard/hero/assets/menu-coding.svg" alt="" />Coding &amp; IT</button>
+              <button type="button" data-path="language-learning"><img src="./dashboard/hero/assets/menu-language.svg" alt="" />Language Learning</button>
+            </div>
+            <div class="mega-menu__column" data-column="Exams">
+              <h2>Exams</h2>
+              <button type="button" data-path="government-exams"><img src="./dashboard/hero/assets/menu-government.svg" alt="" />Government Exams</button>
+              <button type="button" data-path="neet-preparation"><img src="./dashboard/hero/assets/menu-neet.svg" alt="" />NEET Preparation</button>
+              <button type="button" data-path="jee-preparation"><img src="./dashboard/hero/assets/menu-jee.svg" alt="" />JEE Preparation</button>
+              <button type="button" data-path="test-series"><img src="./dashboard/hero/assets/menu-tests.svg" alt="" />Test Series</button>
+            </div>
+            <div class="mega-menu__column" data-column="Degrees & Colleges">
+              <h2>Degrees &amp; Colleges</h2>
+              <button type="button" data-path="online-degrees"><img src="./dashboard/hero/assets/menu-online-degree.svg" alt="" />Online Degrees</button>
+              <button type="button" data-path="offline-colleges"><img src="./dashboard/hero/assets/menu-offline-colleges.svg" alt="" />Offline Colleges</button>
+              <button type="button" data-path="study-abroad"><img src="./dashboard/hero/assets/menu-study-abroad.svg" alt="" />Study Abroad</button>
+            </div>
+            <div class="mega-menu__column" data-column="Tools">
+              <h2>Tools</h2>
+              <button type="button" data-path="ai-career-path"><img src="./dashboard/hero/assets/menu-career.svg" alt="" />AI Career Path</button>
+              <button type="button" data-path="ai-doubt-solver"><img src="./dashboard/hero/assets/menu-doubt.svg" alt="" />AI Doubt Solver</button>
+              <button type="button" data-path="compare-degrees"><img src="./dashboard/hero/assets/menu-compare.svg" alt="" />Compare Degrees</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="hero__background-words" aria-hidden="true">
+          <span class="hero__word hero__word--school">School Learning</span>
+          <span class="hero__word hero__word--tutoring">1:1 Tutoring</span>
+          <span class="hero__word hero__word--study">Study Abroad</span>
+          <span class="hero__word hero__word--online">Online Degree</span>
+          <span class="hero__word hero__word--coding">Coding &amp; IT</span>
+          <span class="hero__word hero__word--skills">Build Skills</span>
+          <span class="hero__word hero__word--jee">JEE</span>
+          <span class="hero__word hero__word--neet">NEET</span>
+          <span class="hero__word hero__word--test">Test Preparation</span>
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__title-row">
+            <span>Where</span>
+            <span class="hero__learning">Learning</span>
+            <span>Leads To</span>
+            <div class="hero__avatars" aria-label="Our learning community">
+              <img src="./dashboard/hero/assets/avatar-1.png" alt="" />
+              <img src="./dashboard/hero/assets/avatar-2.png" alt="" />
+              <img src="./dashboard/hero/assets/avatar-3.png" alt="" />
+              <img src="./dashboard/hero/assets/avatar-3.png" alt="" />
+            </div>
+          </div>
+          <h1 id="hero-title" aria-label="Where Learning Leads To Brighter Futures">Brighter Futures</h1>
+          <p>From school learning to college, skills and careers — discover, compare and choose what’s right for their next step.</p>
+          <div class="hero__buttons">
+            <button type="button" class="hero__button hero__button--primary" data-action="journey"><span class="hero__button-icon"><img src="./dashboard/hero/assets/search.svg" alt="" /></span>Explore Their Journey</button>
+            <button type="button" class="hero__button hero__button--secondary" data-action="options">Explore Options<span class="hero__button-icon"><img src="./dashboard/hero/assets/arrow-diagonal.svg" alt="" /></span></button>
+          </div>
+        </div>
+
+        <img class="hero__doodle-left" src="./dashboard/hero/assets/doodle-left.svg" alt="" />
+        <img class="hero__doodle-right" src="./dashboard/hero/assets/doodle-right.svg" alt="" />
+        <img class="hero__accent-lines" src="./dashboard/hero/assets/accent-lines.svg" alt="" />
+      </section>
+    </main>
+  </body>
+</html>

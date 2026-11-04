@@ -1,0 +1,20 @@
+@font-face { font-family: Figtree; src: url('../fonts/figtree-latin.woff2') format('woff2'); font-style: normal; font-weight: 400 900; font-display: swap; }
+@font-face { font-family: Inter; src: url('../fonts/inter-latin.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: Manrope; src: url('../fonts/manrope-latin.woff2') format('woff2'); font-style: normal; font-weight: 200 800; font-display: swap; }
+:root {
+  --surface: #fffdfa;
+  --text-primary: #0f172a;
+  --text-tertiary: #64748b;
+  --orange-500: #f97316;
+  --blue-700: #0051a0;
+  --border-soft: #d2dae4;
+  font-family: Figtree, sans-serif;
+  color: var(--text-primary);
+  background: var(--surface);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid #0051a0; outline-offset: 4px; }
