@@ -7,11 +7,12 @@
     <title>ManzilChaser — Where Learning Leads To Brighter Futures</title>
     <link rel="stylesheet" href="./dashboard/styles/tokens.css" />
     <link rel="stylesheet" href="./dashboard/hero/hero.css" />
+    <link rel="stylesheet" href="./dashboard/direct-pathways/direct-pathways.css" />
     <script defer src="./dashboard/hero/hero.js"></script>
+    <script defer src="./dashboard/direct-pathways/direct-pathways.js"></script>
   </head>
   <body>
     <main id="dashboard">
-      <!-- Add future sections here as siblings of the hero. -->
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <img class="hero__blue-shape" src="./dashboard/hero/assets/blue-shape.svg" alt="" />
         <img class="hero__yellow-shape" src="./dashboard/hero/assets/yellow-shape.svg" alt="" />
@@ -100,6 +101,52 @@
         <img class="hero__doodle-left" src="./dashboard/hero/assets/doodle-left.svg" alt="" />
         <img class="hero__doodle-right" src="./dashboard/hero/assets/doodle-right.svg" alt="" />
         <img class="hero__accent-lines" src="./dashboard/hero/assets/accent-lines.svg" alt="" />
+      </section>
+      <section class="direct-pathways" id="direct-pathways" aria-labelledby="direct-pathways-title">
+        <div class="direct-pathways__inner">
+          <div class="direct-pathways__heading">
+            <p class="direct-pathways__eyebrow">DIRECT PATHWAYS</p>
+            <h2 id="direct-pathways-title">What are you <span class="direct-pathways__highlight">looking</span> for today?</h2>
+          </div>
+          <img class="direct-pathways__sparkle" src="./dashboard/direct-pathways/assets/sparkle.svg" alt="" />
+          <div class="direct-pathways__cards">
+            <button class="direct-pathways__card direct-pathways__card--school" type="button" data-pathway="school-learning" aria-label="Explore School Learning">
+              <span class="direct-pathways__card-main">
+                <img class="direct-pathways__icon" src="./dashboard/direct-pathways/assets/book-open.svg" alt="" />
+                <span class="direct-pathways__copy"><span class="direct-pathways__card-title">School Learning</span><span class="direct-pathways__description">Classes 1–10 with expert guidance</span></span>
+              </span>
+              <span class="direct-pathways__arrow"><img src="./dashboard/direct-pathways/assets/arrow-right.svg" alt="" /></span>
+            </button>
+            <button class="direct-pathways__card direct-pathways__card--degrees" type="button" data-pathway="online-degrees" aria-label="Explore Online Degrees">
+              <span class="direct-pathways__card-main">
+                <img class="direct-pathways__icon" src="./dashboard/direct-pathways/assets/graduation-cap.svg" alt="" />
+                <span class="direct-pathways__copy"><span class="direct-pathways__card-title">Online Degrees</span><span class="direct-pathways__description">Compare &amp; apply to top programs</span></span>
+              </span>
+              <span class="direct-pathways__arrow"><img src="./dashboard/direct-pathways/assets/arrow-right.svg" alt="" /></span>
+            </button>
+            <button class="direct-pathways__card direct-pathways__card--coding" type="button" data-pathway="coding-it" aria-label="Explore Coding and IT">
+              <span class="direct-pathways__card-main">
+                <img class="direct-pathways__icon" src="./dashboard/direct-pathways/assets/laptop-check.svg" alt="" />
+                <span class="direct-pathways__copy"><span class="direct-pathways__card-title">Coding &amp; IT</span><span class="direct-pathways__description">Build in-demand skills for the future</span></span>
+              </span>
+              <span class="direct-pathways__arrow"><img src="./dashboard/direct-pathways/assets/arrow-right.svg" alt="" /></span>
+            </button>
+            <button class="direct-pathways__card direct-pathways__card--tests" type="button" data-pathway="test-preparation" aria-label="Explore Test Preparation">
+              <span class="direct-pathways__card-main">
+                <img class="direct-pathways__icon" src="./dashboard/direct-pathways/assets/test-prep.svg" alt="" />
+                <span class="direct-pathways__copy"><span class="direct-pathways__card-title">Test Preparation</span><span class="direct-pathways__description">NEET, JEE, Govt. Exams and more</span></span>
+              </span>
+              <span class="direct-pathways__arrow"><img src="./dashboard/direct-pathways/assets/arrow-right.svg" alt="" /></span>
+            </button>
+            <button class="direct-pathways__card direct-pathways__card--abroad" type="button" data-pathway="study-abroad" aria-label="Explore Study Abroad">
+              <span class="direct-pathways__card-main">
+                <img class="direct-pathways__icon" src="./dashboard/direct-pathways/assets/airplane.svg" alt="" />
+                <span class="direct-pathways__copy"><span class="direct-pathways__card-title">Study Abroad</span><span class="direct-pathways__description">Global universities and opportunities</span></span>
+              </span>
+              <span class="direct-pathways__arrow"><img src="./dashboard/direct-pathways/assets/arrow-right.svg" alt="" /></span>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   </body>

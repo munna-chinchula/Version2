@@ -1,6 +1,6 @@
 # ManzilChaser Dashboard
 
-Standalone HTML, CSS, and JavaScript implementation of the [1440 × 900 Figma Hero](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=7017-10978). Dashboard sections live in their own `dashboard/<name>/` folders.
+Standalone HTML, CSS, and JavaScript implementation of the [1440 × 900 Figma Hero](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=7017-10978) and the [Direct Pathways section](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=7032-12418). Dashboard sections live in their own `dashboard/<name>/` folders.
 
 ## Run locally
 
@@ -14,8 +14,9 @@ Open `http://localhost:8000` and compare at a 1440 × 900 browser viewport. The 
 
 ## Structure
 
-- `index.html` assembles the page. Add future dashboard sections beneath the Hero.
+- `index.html` assembles the page, with Direct Pathways immediately after the Hero.
 - `dashboard/hero/` contains the Hero layout, interactions, and Figma assets.
+- `dashboard/direct-pathways/` contains the five pathway cards, interaction, and Figma SVG assets.
 - `dashboard/styles/tokens.css` holds shared colors and font definitions.
 - `dashboard/fonts/` contains local font files and their licenses.
 

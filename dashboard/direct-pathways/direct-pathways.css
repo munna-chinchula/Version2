@@ -1,0 +1,140 @@
+.direct-pathways {
+  min-height: 540px;
+  padding: 80px;
+  background: var(--surface);
+  color: #333;
+}
+
+.direct-pathways__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 380px;
+}
+
+.direct-pathways__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.direct-pathways__eyebrow {
+  width: 100%;
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -.18px;
+}
+
+.direct-pathways__heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 57.3px;
+  margin: 0;
+  color: rgba(0, 0, 0, .8);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: -.2px;
+}
+
+.direct-pathways__highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  height: 40px;
+  padding: 0 18px;
+  transform: rotate(-8deg);
+  border: 1px solid var(--orange-500);
+  border-radius: 13.33px;
+  background: var(--orange-500);
+  box-shadow: 3.33px 3.33px 0 #000;
+  color: #000;
+  font-size: 26.67px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.35px;
+}
+
+.direct-pathways__sparkle {
+  position: absolute;
+  top: -1px;
+  right: 175px;
+  width: 79.6077px;
+  height: 86.176px;
+  transform: rotate(17deg);
+  pointer-events: none;
+}
+
+.direct-pathways__cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.direct-pathways__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 256.7px;
+  padding: 20px;
+  border: 2.5px solid #000;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #000;
+  color: #262626;
+  text-align: left;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.direct-pathways__card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; }
+.direct-pathways__card:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000; }
+.direct-pathways__card--school { background: #c8fb95; }
+.direct-pathways__card--degrees { background: #fdbbdf; }
+.direct-pathways__card--coding { background: #bcdffe; }
+.direct-pathways__card--tests { background: #feeb8d; }
+.direct-pathways__card--abroad { background: #e2fca6; }
+
+.direct-pathways__card-main,
+.direct-pathways__copy { display: flex; flex-direction: column; align-items: flex-start; }
+.direct-pathways__card-main { gap: 16px; width: 100%; }
+.direct-pathways__icon { display: block; width: 54px; height: 54px; flex: none; }
+.direct-pathways__copy { gap: 6px; width: 100%; }
+.direct-pathways__card-title { width: 100%; font-size: 20px; font-weight: 600; line-height: 22px; letter-spacing: -.9px; }
+.direct-pathways__description { width: 100%; color: #737373; font-size: 14px; font-weight: 400; line-height: 20px; letter-spacing: -.16px; }
+.direct-pathways__arrow { display: grid; width: 40px; height: 40px; flex: none; place-items: center; border-radius: 50%; background: #fff; }
+.direct-pathways__arrow img { display: block; width: 20px; height: 20px; }
+
+@media (max-width: 1100px) {
+  .direct-pathways { padding: 72px 40px; }
+  .direct-pathways__inner { min-height: 0; }
+  .direct-pathways__cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .direct-pathways__card { min-height: 260px; }
+  .direct-pathways__sparkle { right: 20px; }
+}
+
+@media (max-width: 680px) {
+  .direct-pathways { padding: 64px 20px; }
+  .direct-pathways__heading h2 { display: block; max-width: 440px; font-size: 28px; line-height: 1.35; }
+  .direct-pathways__highlight { margin: 8px 4px; font-size: 25px; }
+  .direct-pathways__sparkle { top: -35px; right: 0; width: 50px; height: auto; }
+  .direct-pathways__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .direct-pathways__card { min-height: 240px; padding: 16px; }
+  .direct-pathways__card-title { font-size: 18px; }
+  .direct-pathways__description { font-size: 13px; line-height: 18px; }
+}
+
+@media (max-width: 420px) {
+  .direct-pathways__cards { grid-template-columns: 1fr; }
+  .direct-pathways__card { min-height: 210px; }
+}
