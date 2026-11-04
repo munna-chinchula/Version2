@@ -1,0 +1,21 @@
+.journey { height: 900px; padding: 130px 80px 0; }
+.journey__title { position: relative; z-index: 3; text-align: center; }
+.journey__steps { position: absolute; z-index: 1; right: 80px; bottom: 123px; left: 80px; display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); align-items: end; }
+.journey__step { display: grid; place-items: center; min-width: 0; border: 2.5px solid #000; border-bottom: 0; border-radius: 14px 14px 0 0; text-align: center; }
+.journey__step span { display: flex; flex-direction: column; align-items: center; max-width: 100%; padding: 12px; }
+.journey__step img { box-sizing: border-box; width: 80px; height: 80px; margin-bottom: 14px; padding: 20px; border: 2px solid #000; border-radius: 50%; }
+.journey__step strong { color: #0f172a; font-size: 16px; font-weight: 600; line-height: 20px; }
+.journey__step small { color: #475569; font-size: 12px; line-height: 16px; }
+.journey__step--school { height: 195px; background: #c8fb95; }
+.journey__step--secondary { height: 258px; background: #fdbbdf; }
+.journey__step--college { height: 338px; background: #bcdffe; }
+.journey__step--degrees { height: 405px; background: #feeb8d; }
+.journey__step--skills { height: 473px; background: #c8fb95; }
+.journey__step--career { height: 539px; background: #bcdffe; }
+.journey__runner { z-index: 2; top: 260px; left: 80px; width: 384px; height: 320px; object-fit: contain; }
+.journey__star-yellow { z-index: 2; top: 246px; left: 569px; width: 51.6752px; height: 55.9388px; }
+.journey__star-purple { z-index: 2; top: 173px; right: 315px; width: 41.4425px; height: 44.8618px; }
+.journey__accent { z-index: 2; top: 231px; left: 300px; width: 36.1058px; height: 28.1363px; }
+.journey__wave { z-index: 3; bottom: -7px; left: -200px; width: 3265.32px; height: 307.775px; max-width: none; }
+@media (max-width: 1050px) { .journey { height: 740px; padding: 90px 30px 0; } .journey__steps { right: 30px; bottom: 100px; left: 30px; } .journey__step { height: min(45vw,400px); } .journey__step--school { height: 150px; } .journey__step--secondary { height: 200px; } .journey__step--college { height: 260px; } .journey__step--degrees { height: 310px; } .journey__step--skills { height: 360px; } .journey__step--career { height: 410px; } .journey__runner { top: 250px; left: 10px; width: 300px; height: 250px; } }
+@media (max-width: 650px) { .journey { height: 620px; padding: 80px 20px 0; } .journey__title { font-size: 28px; } .journey__steps { right: 20px; bottom: 110px; left: 20px; } .journey__step { height: 200px; } .journey__step--school { height: 90px; } .journey__step--secondary { height: 120px; } .journey__step--college { height: 150px; } .journey__step--degrees { height: 180px; } .journey__step--skills { height: 210px; } .journey__step--career { height: 240px; } .journey__step span { padding: 3px; } .journey__step img { width: 32px; height: 32px; padding: 5px; margin-bottom: 4px; } .journey__step strong { font-size: 8px; line-height: 10px; } .journey__step small { display: none; } .journey__runner { top: 250px; left: 0; width: 200px; height: 166px; } .journey__star-yellow { left: 44%; } .journey__star-purple { right: 16%; } .journey__wave { bottom: -55px; } }

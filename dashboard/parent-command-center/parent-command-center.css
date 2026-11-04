@@ -1,0 +1,10 @@
+.parent-center { height: 782px; padding: 80px; text-align: center; }
+.parent-center__visual { position: relative; width: 710px; height: 440px; margin: 20px auto 0; }
+.parent-center__blob { position: absolute; top: 0; left: 0; width: 707.663px; height: 462.236px; }
+.parent-center__dashboard { position: absolute; z-index: 1; top: 48px; left: 86px; width: 550px; height: auto; transform: rotate(-6deg); }
+.parent-center__button { position: relative; z-index: 2; margin-top: 26px; }
+.parent-center__star-purple { top: 305px; left: 295px; width: 41.4425px; height: 44.8618px; }
+.parent-center__star-yellow { top: 484px; right: 389px; width: 51.6752px; height: 55.9388px; }
+.parent-center__doodle { bottom: 97px; left: 425px; width: 61.9779px; height: 51.4404px; }
+.parent-center__accent { top: 255px; right: 218px; width: 63.7393px; height: 49.6712px; }
+@media (max-width: 800px) { .parent-center { height: auto; padding: 72px 24px; } .parent-center__visual { width: min(710px,100%); height: min(440px,60vw); } .parent-center__blob { width: 100%; height: 100%; } .parent-center__dashboard { top: 10%; left: 12%; width: 78%; } .parent-center__button { margin-top: 28px; } }

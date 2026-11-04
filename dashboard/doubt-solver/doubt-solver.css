@@ -1,0 +1,11 @@
+.doubt-solver { display: flex; align-items: center; height: 492px; padding: 80px; }
+.doubt-solver__copy { position: relative; z-index: 2; width: 58%; }
+.doubt-solver__copy .cta-button { margin-top: 40px; }
+.doubt-solver__blob { position: absolute; top: 70px; right: 104px; width: 436.122px; height: 335.833px; }
+.doubt-solver__student { position: absolute; top: 49px; right: 65px; width: 530px; height: 353px; object-fit: contain; }
+.doubt-solver__star-yellow { top: 60px; right: 505px; width: 51.6752px; height: 55.9388px; }
+.doubt-solver__star-orange { top: 245px; right: 606px; width: 59.5281px; height: 62.2216px; }
+.doubt-solver__star-purple { top: 298px; right: 92px; width: 41.4425px; height: 44.8618px; }
+.doubt-solver__accent { top: 82px; right: 74px; width: 61.9779px; height: 51.4404px; }
+@media (max-width: 1000px) { .doubt-solver { height: 540px; padding: 60px 40px; } .doubt-solver__copy { width: 55%; } .doubt-solver__student { right: -35px; width: 50%; } .doubt-solver__blob { right: 0; width: 45%; } }
+@media (max-width: 700px) { .doubt-solver { display: block; height: 650px; padding: 60px 20px; } .doubt-solver__copy { width: 100%; } .doubt-solver__copy .cta-button { margin-top: 30px; } .doubt-solver__blob { top: 315px; right: 7%; width: 75%; height: 270px; } .doubt-solver__student { top: 300px; right: 0; width: 100%; height: 300px; } .doubt-solver__star-orange { top: 380px; right: auto; left: 10px; } }

@@ -1,0 +1,12 @@
+.recommendation-engine { height: 432px; padding: 80px; }
+.recommendation-engine__form { max-width: 1066px; margin: 32px auto 0; }
+.recommendation-engine__fields { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.recommendation-engine__fields label { display: flex; flex-direction: column; gap: 8px; min-width: 0; color: #0f172a; font-size: 14px; font-weight: 600; }
+.recommendation-engine__select { position: relative; display: block; height: 54px; border: 2.5px solid #000; border-radius: 8px; box-shadow: 3px 3px 0 #000; background: #fff; }
+.recommendation-engine__select select { width: 100%; height: 100%; padding: 0 43px 0 13px; appearance: none; border: 0; border-radius: 8px; outline: 0; background: transparent; color: #475569; font-family: Figtree,sans-serif; font-size: 16px; font-weight: 400; text-overflow: ellipsis; cursor: pointer; }
+.recommendation-engine__select:focus-within { outline: 3px solid #0051a0; outline-offset: 4px; }
+.recommendation-engine__select img { position: absolute; top: 13px; right: 13px; width: 24px; height: 24px; pointer-events: none; }
+.recommendation-engine__action { position: relative; display: flex; justify-content: center; margin-top: 32px; }
+.recommendation-engine__accent { position: absolute; top: -18px; left: calc(50% + 95px); width: 36.1058px; height: 28.1363px; }
+@media (max-width: 900px) { .recommendation-engine { height: auto; padding: 72px 32px; } .recommendation-engine__fields { gap: 14px; } }
+@media (max-width: 700px) { .recommendation-engine { padding: 64px 20px; } .recommendation-engine__fields { grid-template-columns: 1fr; gap: 18px; } .recommendation-engine__form { margin-top: 28px; } }
