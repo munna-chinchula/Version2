@@ -12,6 +12,8 @@ node dev-server.js
 
 Open `http://localhost:8000` and compare at a 1440 × 900 browser viewport. The project has no package install or build step. Serve it over HTTP because `dashboard/sections.js` loads the section HTML files with `fetch`.
 
+The Offline Colleges page is at `http://localhost:8000/offline-colleges/index.html`. Open it from **Degrees & Colleges → Offline Colleges** in the dashboard navigation. Its Figma reference is [the Offline Colleges hero](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=6994-11467).
+
 ## Structure
 
 - `index.html` assembles the page in Figma order. The section folders under `dashboard/` are:
@@ -35,6 +37,23 @@ Open `http://localhost:8000` and compare at a 1440 × 900 browser viewport. The 
 - `dashboard/scroll/` bundles Lenis 1.3.27, its MIT license, and the page scroll setup. The Hero fills the viewport at the 1440 × 900 design size and adapts to other viewport heights.
 - `dashboard/styles/tokens.css` holds shared colors and font definitions.
 - `dashboard/fonts/` contains local font files and their licenses.
+
+The Offline Colleges page follows the same pattern under `offline-colleges/`. Its `index.html` assembles the viewport hero and section slots, `page.js` loads each section and handles the listing controls, and every section has its own HTML, CSS, and `assets/` directory:
+
+1. `hero/`
+2. `trusted-institutions/`
+3. `next-chapter/`
+4. `recommendation-engine/`
+5. `offline-colleges/`
+6. `compare/`
+7. `career-day-one/`
+8. `skills-to-opportunities/`
+9. `need-guidance/`
+10. `testimonials/`
+11. `faq/`
+12. `footer/`
+
+The three featured college cards are the examples shown in Figma. Search, location filters, sorting, and the college detail dialog operate on those cards; a larger college catalog and destination pages require real data and routes.
 
 The navigation has the five Figma menu states: Explore, Exams, Degrees & Colleges, Skills & Learning, and Tools. Kids Learning navigates directly. Navigation and section actions dispatch a cancelable `manzil:navigate` event with `event.detail.path`; if no application router handles the event, the URL hash changes. The recommendation form includes its selections in `event.detail.selections`. The newsletter form emits `manzil:newsletter` with the entered email. Destination pages and form backends can be connected later.
 

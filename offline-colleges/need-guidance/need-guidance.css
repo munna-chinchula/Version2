@@ -1,0 +1,11 @@
+.need-guidance { height: 900px; padding: 130px 80px 80px; background: #eff6ff; text-align: center; }
+.need-guidance__visual { position: relative; z-index: 2; width: 380px; height: 380px; margin: 40px auto 0; }
+.need-guidance__square { width: 380px; height: 380px; overflow: hidden; border-radius: 32px; background: #0051a0; }
+.need-guidance__square img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.need-guidance__button { position: relative; z-index: 2; margin-top: 40px; border: 2.5px solid #000; border-radius: 35px; font-size: 20px; min-height: 66px; padding: 12px 30px; }
+.need-guidance__dotted { top: 515px; left: calc(50% - 465px); width: 295.658px; height: 99.9484px; }
+.need-guidance__star-yellow { top: 293px; left: calc(50% - 352px); width: 72.1406px; height: 78.0928px; }
+.need-guidance__star-purple { top: 307px; right: calc(50% - 313px); width: 61.9079px; height: 67.0158px; }
+.need-guidance__star-orange { top: 415px; right: calc(50% - 365px); width: 83.023px; height: 86.7274px; }
+.need-guidance__accent { top: 96px; right: calc(50% - 266px); width: 63.7393px; height: 49.6712px; }
+@media (max-width: 700px) { .need-guidance { height: auto; padding: 80px 20px; } .need-guidance__visual, .need-guidance__square { width: min(380px,100%); height: min(380px,calc(100vw - 40px)); } .need-guidance__button { max-width: 100%; font-size: 16px; } .need-guidance__dotted { display: none; } .need-guidance__star-yellow { left: 8px; } .need-guidance__star-purple { right: 2px; } .need-guidance__star-orange { right: 0; } }

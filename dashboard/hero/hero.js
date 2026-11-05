@@ -56,7 +56,14 @@
   function navigate(path) {
     // A host application can intercept this event and route to a real page.
     const event = new CustomEvent('manzil:navigate', { detail: { path }, cancelable: true });
-    if (window.dispatchEvent(event)) window.location.hash = path;
+    if (window.dispatchEvent(event)) {
+      if (path === 'offline-colleges') {
+        const fromOfflinePage = document.body.dataset.page === 'offline-colleges';
+        window.location.href = new URL(fromOfflinePage ? '../offline-colleges/index.html' : './offline-colleges/index.html', window.location.href);
+      } else {
+        window.location.hash = path;
+      }
+    }
     closeMenu();
     mobileToggle.setAttribute('aria-expanded', 'false');
     nav.classList.remove('is-open');

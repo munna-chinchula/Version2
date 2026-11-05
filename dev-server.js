@@ -8,7 +8,7 @@ const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascrip
 
 http.createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, `http://localhost:${port}`).pathname);
-  const file = path.resolve(root, `.${pathname === '/' ? '/index.html' : pathname}`);
+  const file = path.resolve(root, `.${pathname === '/' ? '/index.html' : pathname.endsWith('/') ? `${pathname}index.html` : pathname}`);
   if (!file.startsWith(root + path.sep) && file !== path.join(root, 'index.html')) {
     response.writeHead(403).end();
     return;
