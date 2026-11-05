@@ -32,6 +32,7 @@ Open `http://localhost:8000` and compare at a 1440 × 900 browser viewport. The 
 
 - Each section folder contains its own HTML, CSS, and `assets/` exports from Figma.
 - `dashboard/sections.js` loads the sections and handles section actions. `dashboard/styles/sections.css` holds shared heading, sticker, and button styles.
+- `dashboard/scroll/` bundles Lenis 1.3.27, its MIT license, and the page scroll setup. The Hero fills the viewport at the 1440 × 900 design size and adapts to other viewport heights.
 - `dashboard/styles/tokens.css` holds shared colors and font definitions.
 - `dashboard/fonts/` contains local font files and their licenses.
 

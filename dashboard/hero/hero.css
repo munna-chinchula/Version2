@@ -1,6 +1,8 @@
 .hero {
   position: relative;
-  min-height: 900px;
+  height: 100vh;
+  height: 100svh;
+  min-height: 620px;
   overflow: hidden;
   isolation: isolate;
   background: var(--surface);
@@ -8,10 +10,10 @@
 .hero__blue-shape, .hero__yellow-shape,
 .hero__doodle-left, .hero__doodle-right, .hero__accent-lines { position: absolute; pointer-events: none; }
 .hero__blue-shape { right: 0; bottom: 0; }
-.hero__yellow-shape { left: -3px; top: 681px; }
-.hero__doodle-left { left: calc(50% - 426px); top: 519px; transform: rotate(18deg); }
-.hero__doodle-right { left: calc(50% + 322px); top: 452px; transform: rotate(8deg); }
-.hero__accent-lines { left: calc(50% + 374px); top: 301px; }
+.hero__yellow-shape { left: -3px; bottom: -73px; }
+.hero__doodle-left { left: calc(50% - 426px); top: calc(50% + 69px); transform: rotate(18deg); }
+.hero__doodle-right { left: calc(50% + 322px); top: calc(50% + 2px); transform: rotate(8deg); }
+.hero__accent-lines { left: calc(50% + 374px); top: calc(50% - 149px); }
 
 .site-header {
   position: absolute;
@@ -63,7 +65,7 @@
 .mega-menu__column button:hover { color: var(--text-primary); }
 .mega-menu__column button img { display: block; flex: none; }
 
-.hero__background-words { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero__background-words { position: absolute; z-index: 0; top: 50%; right: 0; left: 0; height: 900px; transform: translateY(-50%); pointer-events: none; }
 .hero__word { position: absolute; color: transparent; -webkit-text-stroke: 1px #dedede; font-family: Inter, sans-serif; font-size: 48px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
 .hero__word--school { left: -2px; top: 197px; }
 .hero__word--tutoring { left: -1px; top: 307px; }
@@ -75,7 +77,7 @@
 .hero__word--neet { left: 1241px; top: 468px; }
 .hero__word--test { left: 1026px; top: 592px; }
 
-.hero__content { position: absolute; z-index: 1; top: 312px; left: 50%; display: flex; flex-direction: column; align-items: center; width: 910px; transform: translateX(-50%); text-align: center; }
+.hero__content { position: absolute; z-index: 1; top: calc(50% - 138px); left: 50%; display: flex; flex-direction: column; align-items: center; width: 910px; transform: translateX(-50%); text-align: center; }
 .hero__title-row { display: flex; align-items: center; justify-content: center; gap: 12px; height: 82px; color: var(--text-primary); font-size: 48px; font-weight: 700; line-height: 64px; letter-spacing: -2.8px; white-space: nowrap; }
 .hero__learning { display: inline-flex; align-items: center; justify-content: center; height: 52px; margin: 0 4px; padding: 10px 22px; transform: rotate(-8deg); border: 1px solid var(--orange-500); border-radius: 16px; background: var(--orange-500); box-shadow: 4px 4px 0 #000; color: #000; font-size: 32px; line-height: 32px; letter-spacing: -.42px; }
 .hero__avatars { display: flex; align-items: center; padding: 0 3px 0 8px; }
@@ -104,7 +106,6 @@
   .site-header__login, .site-header__start { font-size: 12px; }
 }
 @media (max-width: 900px) {
-  .hero { min-height: 760px; }
   .site-header { top: 20px; height: 68px; }
   .site-header__mobile-toggle { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; order: 3; width: 40px; height: 40px; border: 0; background: transparent; }
   .site-header__mobile-toggle span { width: 20px; height: 2px; background: var(--text-primary); }
@@ -124,14 +125,13 @@
   .hero__doodle-left, .hero__doodle-right, .hero__accent-lines { display: none; }
 }
 @media (max-width: 600px) {
-  .hero { min-height: 760px; }
   .site-header__login { display: none; }
   .site-header__start { min-height: 40px; padding: 5px 5px 5px 10px; font-size: 11px; }
   .site-header__start span { width: 26px; height: 26px; }
   .brand img { width: 145px; height: auto; }
   .mega-menu[data-variant] { top: calc(100% + 300px); grid-template-columns: 1fr; max-height: 330px; }
   .mega-menu__column button { font-size: 16px; }
-  .hero__content { top: 225px; }
+  .hero__content { top: clamp(200px, calc(50% - 160px), 300px); }
   .hero__title-row { gap: 9px; font-size: 34px; letter-spacing: -2px; }
   .hero__learning { height: 46px; padding: 8px 15px; font-size: 25px; }
   .hero__avatars { width: 100%; justify-content: center; }
@@ -143,5 +143,5 @@
   .hero__background-words { opacity: .35; }
   .hero__word--study, .hero__word--online { display: none; }
   .hero__blue-shape { right: -140px; }
-  .hero__yellow-shape { left: -90px; top: 625px; }
+  .hero__yellow-shape { left: -90px; }
 }

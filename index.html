@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#fffdfa" />
     <title>ManzilChaser — Where Learning Leads To Brighter Futures</title>
     <link rel="stylesheet" href="./dashboard/styles/tokens.css" />
+    <link rel="stylesheet" href="./dashboard/scroll/lenis.css" />
     <link rel="stylesheet" href="./dashboard/hero/hero.css" />
     <link rel="stylesheet" href="./dashboard/direct-pathways/direct-pathways.css" />
     <link rel="stylesheet" href="./dashboard/styles/sections.css" />
@@ -20,6 +21,8 @@
     <link rel="stylesheet" href="./dashboard/need-guidance/need-guidance.css" />
     <link rel="stylesheet" href="./dashboard/faq/faq.css" />
     <link rel="stylesheet" href="./dashboard/footer/footer.css" />
+    <script defer src="./dashboard/scroll/lenis.min.js"></script>
+    <script defer src="./dashboard/scroll/scroll.js"></script>
     <script defer src="./dashboard/hero/hero.js"></script>
     <script defer src="./dashboard/direct-pathways/direct-pathways.js"></script>
     <script defer src="./dashboard/sections.js"></script>
@@ -49,7 +52,7 @@
             <button type="button" class="site-header__login" data-action="login">Login</button>
             <button type="button" class="site-header__start" data-action="start">Get Started <span><img src="./dashboard/hero/assets/nav-arrow.svg" alt="" /></span></button>
           </div>
-          <div class="mega-menu" id="mega-menu" data-variant="explore" hidden aria-label="Explore ManzilChaser">
+          <div class="mega-menu" id="mega-menu" data-variant="explore" data-lenis-prevent hidden aria-label="Explore ManzilChaser">
             <div class="mega-menu__column" data-column="Learning">
               <h2>Learning</h2>
               <button type="button" data-path="kids-learning"><img src="./dashboard/hero/assets/menu-kids.svg" alt="" />Kids Learning</button>

@@ -1,8 +1,9 @@
-.why-manzilchaser { height: 900px; padding: 52px 80px 40px; text-align: center; }
-.why-manzilchaser__visual { position: relative; width: 540px; height: 420px; margin: 20px auto 0; }
-.why-manzilchaser__blob { position: absolute; top: 0; left: 0; width: 522.052px; height: 471px; }
-.why-manzilchaser__student { position: absolute; z-index: 1; top: 30px; left: 15px; width: 510px; height: 383px; object-fit: contain; }
-.why-manzilchaser__features { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin-top: 16px; text-align: left; }
+.why-manzilchaser { width: min(100%, 1440px); height: 900px; margin-inline: auto; padding: 80px 80px 40px; text-align: center; }
+.why-manzilchaser__visual { position: relative; width: 100%; height: 346px; margin: 56px auto 0; }
+.why-manzilchaser__blob { position: absolute; top: -90px; left: calc(50% - 283px); width: 522.052px; height: 471px; }
+.why-manzilchaser__student-crop { position: absolute; z-index: 1; top: calc(50% + 8px); left: calc(50% - 34px); width: 322px; height: 370px; overflow: hidden; transform: translate(-50%, -50%); }
+.why-manzilchaser__student { position: absolute; top: -9.38%; left: -67.42%; width: 167.33%; height: 109.38%; max-width: none; }
+.why-manzilchaser__features { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin-top: 64px; text-align: left; }
 .why-manzilchaser__features article { min-width: 0; height: 160px; padding: 18px; border: 2.5px solid #000; border-radius: 16px; box-shadow: 4px 4px 0 #000; }
 .why-manzilchaser__features article:nth-child(1) { background: #c8fb95; }
 .why-manzilchaser__features article:nth-child(2) { background: #fdbbdf; }
@@ -11,10 +12,9 @@
 .why-manzilchaser__features img { display: block; width: 54px; height: 54px; margin-bottom: 10px; }
 .why-manzilchaser__features h3 { margin: 0 0 5px; font-size: 20px; font-weight: 600; letter-spacing: -.7px; }
 .why-manzilchaser__features p { margin: 0; color: #737373; font-size: 14px; line-height: 20px; }
-.why-manzilchaser__button { position: relative; z-index: 3; margin-top: 24px; }
 .why-manzilchaser__burst { top: 239px; right: -13px; width: 170.378px; height: 292.039px; }
 .why-manzilchaser__star-purple { top: 301px; left: 330px; width: 63.7393px; height: 49.6712px; }
 .why-manzilchaser__star-yellow { top: 401px; right: 378px; width: 51.6752px; height: 55.9388px; }
 .why-manzilchaser__doodle { top: 530px; left: 453px; width: 41.4425px; height: 44.8618px; }
 @media (max-width: 1000px) { .why-manzilchaser { height: auto; padding: 64px 40px; } .why-manzilchaser__features { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media (max-width: 650px) { .why-manzilchaser { padding: 64px 20px; } .why-manzilchaser__visual { width: 100%; height: 315px; } .why-manzilchaser__blob { width: 100%; height: 100%; } .why-manzilchaser__student { width: 100%; height: 100%; left: 0; top: 0; } .why-manzilchaser__features { gap: 12px; } .why-manzilchaser__features article { height: 170px; padding: 12px; } .why-manzilchaser__features h3 { font-size: 16px; } .why-manzilchaser__features p { font-size: 12px; } .why-manzilchaser__burst { opacity: .3; } }
+@media (max-width: 650px) { .why-manzilchaser { padding: 64px 20px; } .why-manzilchaser__visual { height: 315px; } .why-manzilchaser__blob { top: -30px; left: 50%; width: min(100%, 400px); height: 100%; transform: translateX(-50%); } .why-manzilchaser__student-crop { width: min(322px,100%); height: 300px; left: 50%; } .why-manzilchaser__features { gap: 12px; margin-top: 32px; } .why-manzilchaser__features article { height: 170px; padding: 12px; } .why-manzilchaser__features h3 { font-size: 16px; } .why-manzilchaser__features p { font-size: 12px; } .why-manzilchaser__burst { opacity: .3; } }
