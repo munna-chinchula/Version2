@@ -38,7 +38,7 @@
         card.hidden = !card.textContent.toLowerCase().includes(query);
         if (!card.hidden) visible++;
       });
-      count.textContent = query ? `${visible} ${visible === 1 ? 'course' : 'courses'} found` : '125 courses found';
+      count.textContent = query ? `${visible} ${visible === 1 ? 'course' : 'courses'} found` : '3 featured courses';
     };
     search?.addEventListener('input', update);
     document.querySelectorAll('[data-kid-topic]').forEach(button => button.addEventListener('click', () => {
@@ -66,7 +66,7 @@
     document.querySelector('#kids-dialog-close')?.addEventListener('click', () => document.querySelector('#kids-dialog').close());
     document.querySelector('#kids-view-more')?.addEventListener('click', () => { document.querySelector('#kids-more-note').hidden = false; });
     document.querySelector('#kids-finder')?.addEventListener('submit', event => { event.preventDefault(); scrollTo('recommended-learning'); });
-    document.querySelector('#newsletter-form')?.addEventListener('submit', event => { event.preventDefault(); event.target.reset(); });
+    document.querySelector('#newsletter-form')?.addEventListener('submit', event => { event.preventDefault(); const email = new FormData(event.target).get('email'); window.dispatchEvent(new CustomEvent('manzil:newsletter', { detail: { email } })); event.target.reset(); });
   }
   document.addEventListener('click', event => {
     const route = event.target.closest('[data-dashboard-route]');

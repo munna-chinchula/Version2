@@ -95,7 +95,7 @@
         card.hidden = !(matchesText && matchesCourse);
         if (!card.hidden) visible += 1;
       });
-      count.textContent = query || courses.length ? `${visible} ${visible === 1 ? 'program' : 'programs'} found` : '125 colleges found';
+      count.textContent = query || courses.length ? `${visible} ${visible === 1 ? 'program' : 'programs'} found` : '3 featured programs';
       empty.hidden = visible !== 0;
     };
     search.addEventListener('input', update);

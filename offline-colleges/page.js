@@ -57,7 +57,7 @@
         card.hidden = !(matchText && matchLocation);
         if (!card.hidden) visible++;
       });
-      count.textContent = query || locations.length ? `${visible} ${visible === 1 ? 'college' : 'colleges'} found` : '125 colleges found';
+      count.textContent = query || locations.length ? `${visible} ${visible === 1 ? 'college' : 'colleges'} found` : `${visible} featured ${visible === 1 ? 'college' : 'colleges'}`;
       empty.hidden = visible !== 0;
     }
     search.addEventListener('input', update);

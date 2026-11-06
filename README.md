@@ -1,60 +1,48 @@
-# ManzilChaser Dashboard
+# ManzilChaser Website Prototype
 
-Standalone HTML, CSS, and JavaScript implementation of the ManzilChaser landing dashboard, starting with the [1440 × 900 Figma Hero](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=7017-10978). Each section lives in its own `dashboard/<name>/` folder so it can be changed independently.
+Section-based static HTML, CSS, and JavaScript implementation of the ManzilChaser Figma website. The repository contains the main dashboard and three destination pages. Each page is assembled from independently editable section folders, so sections can be revised without replacing an entire page.
+
+## Pages
+
+Run the included local server and open any route below:
+
+| Page | Local route |
+| --- | --- |
+| Main dashboard | `http://localhost:8000/` |
+| Offline Colleges | `http://localhost:8000/offline-colleges/index.html` |
+| Online Degrees | `http://localhost:8000/online-degrees/index.html` |
+| Kids Learning | `http://localhost:8000/kids-learning/index.html` |
+
+Dashboard navigation links to Offline Colleges, Online Degrees, and Kids Learning. The destination pages include their page-specific sections and share the appropriate FAQ, testimonials, and footer sections where the Figma layouts call for them.
 
 ## Run locally
 
-Serve this folder with the included Node server (no dependencies):
+Requires Node.js. No npm dependencies or build step are needed.
 
 ```powershell
 node dev-server.js
 ```
 
-Open `http://localhost:8000` and compare at a 1440 × 900 browser viewport. The project has no package install or build step. Serve it over HTTP because `dashboard/sections.js` loads the section HTML files with `fetch`.
+Open `http://localhost:8000/`. Use an HTTP server because page sections are loaded with `fetch`; opening HTML files directly with `file://` will not work correctly. The design reference viewport for the main dashboard hero is 1440 × 900. The pages are responsive at narrower widths as well.
 
-The Offline Colleges page is at `http://localhost:8000/offline-colleges/index.html`. Open it from **Degrees & Colleges → Offline Colleges** in the dashboard navigation. Its Figma reference is [the Offline Colleges hero](https://www.figma.com/design/v71tcRulXEofBHatgjW0he/MANZIL-CHASER-V2?node-id=6994-11467).
+## Section structure
 
-## Structure
+- `dashboard/` contains the main landing page sections: hero, direct pathways, interactive recommendation engine, instruction models, journey, compare, parent command center, why ManzilChaser, doubt solver, testimonials, need guidance, FAQ, and footer.
+- `offline-colleges/` contains the Offline Colleges page, including its hero, trusted institutions, next chapter, recommendation engine, college listing, compare, career and skills sections, guidance, testimonials, FAQ, and footer.
+- `online-degrees/` contains the Online Degrees page, including its hero, trusted institutions, next step, recommendation engine, online programs, compare, learning format, career and skills sections, guidance, testimonials, FAQ, and footer.
+- `kids-learning/` contains the Kids Learning page, including its hero, learning areas, instruction models, learning finder, recommended courses, compare, reasons to choose ManzilChaser, learning journey, parent command center, ready-to-start section, testimonials, FAQ, and footer.
+- Each page has a page entry file and loader/controller JavaScript. Section HTML, CSS, and exported assets are grouped in section-specific folders. Shared styles and design tokens are kept separate where practical.
+- The dashboard and destination pages bundle Lenis scrolling and the locally supplied fonts/assets. Third-party font licenses are included alongside the font files.
 
-- `index.html` assembles the page in Figma order. The section folders under `dashboard/` are:
+## Interactions and prototype scope
 
-  1. `hero/`
-  2. `direct-pathways/`
-  3. `interactive-recommendation-engine/`
-  4. `instruction-models/`
-  5. `journey/`
-  6. `compare/`
-  7. `parent-command-center/`
-  8. `why-manzilchaser/`
-  9. `doubt-solver/`
-  10. `testimonials/`
-  11. `need-guidance/`
-  12. `faq/`
-  13. `footer/`
+Search, sorting, topic selection, sample filters, comparison selection, detail dialogs, in-page navigation, and FAQ interactions are client-side prototype behaviors. The catalogue cards are illustrative Figma examples: the Offline Colleges and Online Degrees pages each currently show three featured entries, and Kids Learning shows three featured courses. Counts reflect the entries present in this prototype; there is no connected production catalogue or API.
 
-- Each section folder contains its own HTML, CSS, and `assets/` exports from Figma.
-- `dashboard/sections.js` loads the sections and handles section actions. `dashboard/styles/sections.css` holds shared heading, sticker, and button styles.
-- `dashboard/scroll/` bundles Lenis 1.3.27, its MIT license, and the page scroll setup. The Hero fills the viewport at the 1440 × 900 design size and adapts to other viewport heights.
-- `dashboard/styles/tokens.css` holds shared colors and font definitions.
-- `dashboard/fonts/` contains local font files and their licenses.
+Navigation and section actions dispatch a cancelable `manzil:navigate` event with `event.detail.path`; without a host router, the page falls back to a URL hash. The recommendation forms currently guide users to the relevant on-page listings. Newsletter forms dispatch `manzil:newsletter` with the email in `event.detail.email`. Connect these events to the client’s router, forms, CRM, and backend before production use. Detail dialogs use the information available in the local sample data; production detail pages and destinations are not part of this static prototype.
 
-The Offline Colleges page follows the same pattern under `offline-colleges/`. Its `index.html` assembles the viewport hero and section slots, `page.js` loads each section and handles the listing controls, and every section has its own HTML, CSS, and `assets/` directory:
+## Handover notes
 
-1. `hero/`
-2. `trusted-institutions/`
-3. `next-chapter/`
-4. `recommendation-engine/`
-5. `offline-colleges/`
-6. `compare/`
-7. `career-day-one/`
-8. `skills-to-opportunities/`
-9. `need-guidance/`
-10. `testimonials/`
-11. `faq/`
-12. `footer/`
-
-The three featured college cards are the examples shown in Figma. Search, location filters, sorting, and the college detail dialog operate on those cards; a larger college catalog and destination pages require real data and routes.
-
-The navigation has the five Figma menu states: Explore, Exams, Degrees & Colleges, Skills & Learning, and Tools. Kids Learning navigates directly. Navigation and section actions dispatch a cancelable `manzil:navigate` event with `event.detail.path`; if no application router handles the event, the URL hash changes. The recommendation form includes its selections in `event.detail.selections`. The newsletter form emits `manzil:newsletter` with the entered email. Destination pages and form backends can be connected later.
-
-Figtree, Inter, and Manrope font files are bundled locally with their licenses. The full logo is an exact SVG export from Figma, so it keeps the original SF Pro Black lettering without requiring that font on the visitor's device.
+- Keep each section’s HTML, CSS, and assets together when changing the design.
+- Update each page loader when adding, removing, or reordering a section.
+- Start the server from the repository root so all relative section and asset paths resolve.
+- This repository is the front-end prototype. Production hosting, domain configuration, backend services, live content, analytics, and form integrations must be supplied and configured by the client.
