@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fffdfa" />
+  <title>Online Degrees — ManzilChaser</title>
+  <link rel="stylesheet" href="../dashboard/styles/tokens.css" />
+  <link rel="stylesheet" href="../dashboard/scroll/lenis.css" />
+  <link rel="stylesheet" href="../dashboard/hero/hero.css" />
+  <link rel="stylesheet" href="../dashboard/styles/sections.css" />
+  <link rel="stylesheet" href="./hero/hero.css" />
+  <link rel="stylesheet" href="./hero/hero-fidelity.css" />
+  <link rel="stylesheet" href="./trusted-institutions/trusted-institutions.css" />
+  <link rel="stylesheet" href="./next-step/next-step.css" />
+  <link rel="stylesheet" href="./recommendation-engine/recommendation-engine.css" />
+  <link rel="stylesheet" href="./online-programs/online-programs.css" />
+  <link rel="stylesheet" href="./compare/compare.css" />
+  <link rel="stylesheet" href="./learn-your-way/learn-your-way.css" />
+  <link rel="stylesheet" href="./skills-to-opportunities/skills-to-opportunities.css" />
+  <link rel="stylesheet" href="./need-guidance/need-guidance.css" />
+  <link rel="stylesheet" href="./testimonials/testimonials.css" />
+  <link rel="stylesheet" href="./faq/faq.css" />
+  <link rel="stylesheet" href="./footer/footer.css" />
+  <script defer src="../dashboard/scroll/lenis.min.js"></script>
+  <script defer src="../dashboard/scroll/scroll.js"></script>
+  <script defer src="../dashboard/hero/hero.js"></script>
+  <script defer src="./page.js"></script>
+</head>
+<body data-page="online-degrees">
+<main id="online-degrees-page">
+  <section class="od-hero" id="hero" aria-labelledby="od-hero-title">
+    <header class="site-header" id="site-header">
+      <a class="brand" href="../" aria-label="ManzilChaser home"><img src="../dashboard/hero/assets/brand-logo.svg" alt="" /></a>
+      <button class="site-header__mobile-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <button class="site-nav__item" type="button" data-menu="Explore" aria-controls="mega-menu" aria-expanded="false">Explore <img src="../dashboard/hero/assets/chevron.svg" alt="" /></button>
+        <button class="site-nav__item" type="button" data-route="kids-learning">Kids Learning</button>
+        <button class="site-nav__item" type="button" data-menu="Exams" aria-controls="mega-menu" aria-expanded="false">Exams <img src="../dashboard/hero/assets/chevron.svg" alt="" /></button>
+        <button class="site-nav__item" type="button" data-menu="Degrees & Colleges" aria-controls="mega-menu" aria-expanded="false">Degrees &amp; Colleges <img src="../dashboard/hero/assets/chevron.svg" alt="" /></button>
+        <button class="site-nav__item" type="button" data-menu="Skills & Learning" aria-controls="mega-menu" aria-expanded="false">Skills &amp; Learning <img src="../dashboard/hero/assets/chevron.svg" alt="" /></button>
+        <button class="site-nav__item" type="button" data-menu="Tools" aria-controls="mega-menu" aria-expanded="false">Tools <img src="../dashboard/hero/assets/chevron.svg" alt="" /></button>
+      </nav>
+      <div class="site-header__actions"><button type="button" class="site-header__login" data-action="login">Login</button><button type="button" class="site-header__start" data-action="start">Get Started <span><img src="../dashboard/hero/assets/nav-arrow.svg" alt="" /></span></button></div>
+      <div class="mega-menu" id="mega-menu" data-variant="explore" data-lenis-prevent hidden aria-label="Explore ManzilChaser">
+        <div class="mega-menu__column" data-column="Learning"><h2>Learning</h2><button type="button" data-path="kids-learning"><img src="../dashboard/hero/assets/menu-kids.svg" alt="" />Kids Learning</button><button type="button" data-path="tuitions"><img src="../dashboard/hero/assets/menu-tuitions.svg" alt="" />Tuitions</button><button type="button" data-path="coding-it"><img src="../dashboard/hero/assets/menu-coding.svg" alt="" />Coding &amp; IT</button><button type="button" data-path="language-learning"><img src="../dashboard/hero/assets/menu-language.svg" alt="" />Language Learning</button></div>
+        <div class="mega-menu__column" data-column="Exams"><h2>Exams</h2><button type="button" data-path="government-exams"><img src="../dashboard/hero/assets/menu-government.svg" alt="" />Government Exams</button><button type="button" data-path="neet-preparation"><img src="../dashboard/hero/assets/menu-neet.svg" alt="" />NEET Preparation</button><button type="button" data-path="jee-preparation"><img src="../dashboard/hero/assets/menu-jee.svg" alt="" />JEE Preparation</button><button type="button" data-path="test-series"><img src="../dashboard/hero/assets/menu-tests.svg" alt="" />Test Series</button></div>
+        <div class="mega-menu__column" data-column="Degrees & Colleges"><h2>Degrees &amp; Colleges</h2><button type="button" data-path="online-degrees"><img src="../dashboard/hero/assets/menu-online-degree.svg" alt="" />Online Degrees</button><button type="button" data-path="offline-colleges"><img src="../dashboard/hero/assets/menu-offline-colleges.svg" alt="" />Offline Colleges</button><button type="button" data-path="study-abroad"><img src="../dashboard/hero/assets/menu-study-abroad.svg" alt="" />Study Abroad</button></div>
+        <div class="mega-menu__column" data-column="Tools"><h2>Tools</h2><button type="button" data-path="ai-career-path"><img src="../dashboard/hero/assets/menu-career.svg" alt="" />AI Career Path</button><button type="button" data-path="ai-doubt-solver"><img src="../dashboard/hero/assets/menu-doubt.svg" alt="" />AI Doubt Solver</button><button type="button" data-path="compare-degrees"><img src="../dashboard/hero/assets/menu-compare.svg" alt="" />Compare Degrees</button></div>
+      </div>
+    </header>
+    <div class="od-hero__content">
+      <div class="od-hero__copy">
+        <p class="od-hero__eyebrow">ONLINE DEGREES</p>
+        <h1 id="od-hero-title">Find Your Right <span class="orange-sticker">degree.</span><em>Build your future.</em></h1>
+        <p class="od-hero__intro">Explore, compare, and choose the right online degree for your goals.</p>
+        <form class="od-hero__search" id="degree-hero-search"><img src="./hero/assets/f6c77.svg" alt="" /><input name="query" type="search" placeholder="Search degrees, universities or specializations..." aria-label="Search online degrees" /><button type="submit">Search <span><img src="./hero/assets/53e79.svg" alt="" /></span></button></form>
+        <div class="od-hero__popular"><h2>Popular searches</h2><div><button type="button" data-degree-topic="MBA"><img src="./hero/assets/5de13.svg" alt="" />MBA</button><button type="button" data-degree-topic="MCA"><img src="./hero/assets/39a01.svg" alt="" />MCA</button><button type="button" data-degree-topic="BBA"><img src="./hero/assets/8cc7d.svg" alt="" />BBA</button><button type="button" data-degree-topic="BCA"><img src="./hero/assets/89f64.svg" alt="" />BCA</button><button type="button" data-degree-topic="M.Com"><img src="./hero/assets/ebcf1.svg" alt="" />M.Com</button></div></div>
+        <div class="od-hero__actions"><a class="od-hero__action od-hero__action--primary" href="#need-guidance"><span><img src="./hero/assets/177fb.svg" alt="" /></span>Book 1 on 1 slot</a><a class="od-hero__action od-hero__action--secondary" href="#online-programs">Explore Options <span><img src="../dashboard/hero/assets/nav-arrow.svg" alt="" /></span></a></div>
+      </div>
+      <div class="od-hero__visual">
+        <img class="od-hero__blob" src="./hero/assets/2b3ec.svg" alt="" />
+        <div class="od-hero__student-frame"><img class="od-hero__student" src="./hero/assets/039c9.png" alt="Student learning through an online degree program" /></div>
+      </div>
+    </div>
+  </section>
+  <div data-online-section="trusted-institutions"></div>
+  <div data-online-section="next-step"></div>
+  <div data-online-section="recommendation-engine"></div>
+  <div data-online-section="online-programs"></div>
+  <div data-online-section="compare"></div>
+  <div data-online-section="learn-your-way"></div>
+  <div data-online-section="skills-to-opportunities"></div>
+  <div data-online-section="need-guidance"></div>
+  <div data-online-section="testimonials"></div>
+  <div data-online-section="faq"></div>
+  <div data-online-section="footer"></div>
+</main>
+</body>
+</html>

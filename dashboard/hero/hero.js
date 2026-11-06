@@ -57,9 +57,14 @@
     // A host application can intercept this event and route to a real page.
     const event = new CustomEvent('manzil:navigate', { detail: { path }, cancelable: true });
     if (window.dispatchEvent(event)) {
-      if (path === 'offline-colleges') {
-        const fromOfflinePage = document.body.dataset.page === 'offline-colleges';
-        window.location.href = new URL(fromOfflinePage ? '../offline-colleges/index.html' : './offline-colleges/index.html', window.location.href);
+      const landingPages = {
+        'offline-colleges': 'offline-colleges/index.html',
+        'online-degrees': 'online-degrees/index.html',
+        'kids-learning': 'kids-learning/index.html',
+      };
+      if (landingPages[path]) {
+        const fromNestedPage = Boolean(document.body.dataset.page);
+        window.location.href = new URL(`${fromNestedPage ? '../' : './'}${landingPages[path]}`, window.location.href);
       } else {
         window.location.hash = path;
       }

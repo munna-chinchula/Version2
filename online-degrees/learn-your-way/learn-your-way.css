@@ -1,0 +1,14 @@
+@import url("../../offline-colleges/career-day-one/career-day-one.css");
+.od-learn{min-height:900px;padding:40px 80px}
+.od-learn .oc-section-heading{position:relative;z-index:2;text-align:center}
+.od-learn .oc-section-heading p{margin:0;color:#6b7280;font-size:16px;font-weight:500;line-height:22px}
+.od-learn .oc-section-heading h2{display:block;margin:10px 0 0;color:#333;font-size:32px;font-weight:600;line-height:1.55;letter-spacing:-.2px;text-align:center}
+.od-learn .oc-section-heading h2 .orange-sticker{display:inline-block;margin:0 10px;line-height:1.1;white-space:nowrap;vertical-align:middle}
+.od-learn .oc-career__intro{margin-top:0}
+.od-learn .oc-career__visual{z-index:1;width:100%;height:346.439px;margin:48px 0 80px}
+.od-learn>.oc-career__blob{position:absolute;z-index:0;left:calc(50% - 14px);top:calc(50% - 44.25px);width:458px;height:414px;max-width:none;transform:translate(-50%,-50%)}
+.od-learn .oc-career__people-frame{position:absolute;z-index:1;left:calc(50% - 22px);top:calc(50% - 6.9px);width:371.175px;height:342px;transform:translate(-50%,-50%);overflow:hidden}
+.od-learn .oc-career__people{position:absolute;left:-38.29%;top:.12%;width:138.21%;height:100%;max-width:none;max-height:none;object-fit:fill;transform:none}
+.od-learn .oc-career__cards{z-index:2}
+.od-learn .oc-career__card p{max-width:270px}
+@media(max-width:850px){.od-learn{padding:64px 24px}.od-learn>.oc-career__blob{width:min(458px,90vw);height:auto}.od-learn .oc-career__people-frame{width:min(371.175px,80vw)}}

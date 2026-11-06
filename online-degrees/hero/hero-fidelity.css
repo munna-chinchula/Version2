@@ -1,0 +1,55 @@
+.od-hero__visual {
+  min-height: 613px;
+}
+
+.od-hero__blob {
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 613px;
+  transform: translate(-50%, -50%);
+}
+
+.od-hero__student-frame {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 47.5px);
+  top: calc(50% - 29.5px);
+  width: 529px;
+  height: 474px;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.od-hero__student {
+  position: absolute;
+  left: -121.74%;
+  top: -48.76%;
+  width: 241.97%;
+  height: 175.57%;
+  max-width: none;
+  object-fit: fill;
+  transform: none;
+}
+
+@media (max-width: 1050px) {
+  .od-hero__visual {
+    transform: scale(.86);
+    transform-origin: center right;
+  }
+}
+
+@media (max-width: 800px) {
+  .od-hero__visual {
+    min-height: 520px;
+    transform: scale(.8);
+    transform-origin: center top;
+  }
+}
+
+@media (max-width: 520px) {
+  .od-hero__visual {
+    min-height: 400px;
+    transform: scale(.62);
+  }
+}
