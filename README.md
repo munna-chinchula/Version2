@@ -27,7 +27,7 @@ Open `http://localhost:8000/`. Use an HTTP server because page sections are load
 
 ## Section structure
 
-- `dashboard/` contains the main landing page sections: hero, direct pathways, interactive recommendation engine, instruction models, journey, compare, parent command center, why ManzilChaser, doubt solver, testimonials, need guidance, FAQ, and footer.
+- `landing-page/` contains the main landing page sections: hero, direct pathways, interactive recommendation engine, instruction models, journey, compare, parent command center, why ManzilChaser, doubt solver, testimonials, need guidance, FAQ, and footer.
 - `offline-colleges/` contains the Offline Colleges page, including its hero, trusted institutions, next chapter, recommendation engine, college listing, compare, career and skills sections, guidance, testimonials, FAQ, and footer.
 - `online-degrees/` contains the Online Degrees page, including its hero, trusted institutions, next step, recommendation engine, online programs, compare, learning format, career and skills sections, guidance, testimonials, FAQ, and footer.
 - `kids-learning/` contains the Kids Learning page, including its hero, learning areas, instruction models, learning finder, recommended courses, compare, reasons to choose ManzilChaser, learning journey, parent command center, ready-to-start section, testimonials, FAQ, and footer.

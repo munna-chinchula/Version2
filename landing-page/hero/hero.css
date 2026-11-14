@@ -64,6 +64,9 @@
 .mega-menu__column button[hidden] { display: none; }
 .mega-menu__column button:hover { color: var(--text-primary); }
 .mega-menu__column button img { display: block; flex: none; }
+.mega-menu__column button:disabled { color: #b6beca; cursor: not-allowed; }
+.mega-menu__column button:disabled:hover { color: #b6beca; }
+.mega-menu__column button:disabled img { opacity: .48; }
 
 .hero__background-words { position: absolute; z-index: 0; top: 50%; right: 0; left: 0; height: 900px; transform: translateY(-50%); pointer-events: none; }
 .hero__word { position: absolute; color: transparent; -webkit-text-stroke: 1px #dedede; font-family: Inter, sans-serif; font-size: 48px; font-weight: 700; line-height: 1.2; white-space: nowrap; }

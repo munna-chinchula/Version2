@@ -2,7 +2,7 @@
   const slots = [...document.querySelectorAll('[data-dashboard-section]')];
   Promise.all(slots.map(async slot => {
     const name = slot.dataset.dashboardSection;
-    const response = await fetch(`./dashboard/${name}/${name}.html`);
+    const response = await fetch(`./landing-page/${name}/${name}.html`);
     if (!response.ok) throw new Error(`Could not load ${name}: ${response.status}`);
     const template = document.createElement('template');
     template.innerHTML = (await response.text()).trim();
